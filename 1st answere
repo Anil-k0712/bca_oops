@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class Box {
+private:
+    int length;
+    int width;
+
+public:
+    void getDimensions(); 
+    void showDimensions() const; 
+};
+
+void Box::getDimensions() {
+     cout << "Enter length: ";
+     cin >> length;
+     cout << "Enter width: ";
+     cin >> width;
+}
+
+void Box::showDimensions() const {
+     cout << "  length: " << length << ", width: " << width <<  endl;
+}
+
+int main() {
+    Box box_1, box_2; 
+
+    box_1.getDimensions();
+    box_2.getDimensions();
+
+    cout<<"object 1"<<endl;
+    box_1.showDimensions();
+    cout<<"object 1"<<endl;
+    box_2.showDimensions();
+
+
+}
